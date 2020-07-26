@@ -1,0 +1,21 @@
+name: Java CI with Maven
+
+on:
+  push:
+    branches: [ develop ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: setup
+        uses: actions/setup-java@v1
+        with:
+          java-version: 14
+      - name: build
+        run: mvn -B clean install -Ddependency-check.skip=true
+      - name: deploy
+        run: mvn -B deploy -Ddependency-check.skip=true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

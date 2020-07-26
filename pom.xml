@@ -23,6 +23,14 @@
         </license>
     </licenses>
 
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub Packages</name>
+            <url>https://maven.pkg.github.com/k0sr/kosr-master-pom</url>
+        </repository>
+    </distributionManagement>
+
     <properties>
         <requireMavenVersion>3.6.1</requireMavenVersion>
         <deployAtEnd>true</deployAtEnd>
