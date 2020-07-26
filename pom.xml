@@ -6,7 +6,7 @@
 
     <groupId>net.kosr</groupId>
     <artifactId>kosr-master-pom</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0</version>
     <packaging>pom</packaging>
 
     <name>kosr.net parent POM</name>
